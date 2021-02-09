@@ -18,7 +18,7 @@ export default class Field extends Component {
     this.forceUpdate();
   };
 
-  getCntrolled = () => {
+  getControlled = () => {
     const {getFieldValue, setFieldValue} = this.context;
     const {name} = this.props;
     return {
@@ -32,6 +32,6 @@ export default class Field extends Component {
   };
   render() {
     const {children} = this.props;
-    return React.cloneElement(children, this.getCntrolled());
+    return React.cloneElement(children, this.getControlled());
   }
 }
