@@ -34,13 +34,13 @@ export const connect = (
   } else if (typeof mapDispatchToProps === "function") {
     dispatchProps = mapDispatchToProps(dispatch);
   }
-  // 让函数强制更新的方法
+  // 让函数强制更新的方法, 建议使用第一种
   // const [, forceUpdate] = useReducer(x => x + 1, 0);
   // const [, forceUpdate] = useState({});
 
   const forceUpdate = useForceUpdate();
-  // * useEffect _ _  DOM变更  effect执行(订阅)
-  // * useLayoutEffect __   DOM变更-effect执行(订阅)
+  // * useEffect _ _  DOM变更  effect执行(订阅)  页面有延迟，延迟的时间可以会丢掉订阅
+  // * useLayoutEffect __   DOM变更-effect执行(订阅)  没有延迟
 
   // 订阅
   //

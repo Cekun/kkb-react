@@ -5,7 +5,6 @@ import {connect} from "../kReactRedux";
 // import {bindActionCreators} from "redux";
 import {bindActionCreators} from "../kReactRedux";
 
-// *今日学霸何伟城：函数 接受一个组件返回一个组件
 // connect原理 高阶组件（hoc）
 @connect(
   // mapStateToProps 把state映射到props
