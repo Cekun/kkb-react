@@ -19,7 +19,7 @@ export default class Router extends Component {
 
   componentWillUnmount() {
     if (this.unlisten) {
-      // this.unlisten();
+      this.unlisten();
     }
   }
 
